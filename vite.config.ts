@@ -11,6 +11,7 @@ export default defineConfig({
     host: true,
     allowedHosts: ['play.onara.top', 'mjda.onara.top'],
   },
+  
   preview: {
     port: 3000,
   },

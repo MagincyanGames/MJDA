@@ -23,18 +23,11 @@ export default function Awards() {
     fetch('/data/games.json').then(r => r.json()).then(setGames)
   }, [])
 
-  // helper
-  const arraysEqual = (a: string[], b: string[]) => {
-    if (a === b) return true
-    if (a.length !== b.length) return false
-    for (let i = 0; i < a.length; i++) if (a[i] !== b[i]) return false
-    return true
-  }
-
   // initialize filters from URL params; update state only when values differ
   useEffect(() => {
     const q = searchParams.get('q') || ''
     const sortParam = (searchParams.get('sort') as 'none' | 'alpha-asc' | 'alpha-desc' | null) || 'alpha-asc'
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     if (q !== query) setQuery(q)
     if (sortParam !== sort) setSort(sortParam)
   }, [searchParams, query, sort])

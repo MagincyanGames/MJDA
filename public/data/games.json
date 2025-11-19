@@ -178,5 +178,72 @@
     "synopsis": "Ambientado en el apocalipsis zombi, Left 4 Dead 2 (L4D2) es la esperadísima secuela del galardonado Left 4 Dead, el juego cooperativo número 1 de 2008. Este FPS cooperativo de acción y terror os llevará a ti y a tus amigos por las ciudades, pantanos y cementerios del Sur Profundo, desde Savannah hasta Nueva Orleans, a lo largo de cinco... ",
     "tags": [],
     "images": []
+  },
+  {
+    "id": "overwatch_2",
+    "name": "Overwatch 2",
+    "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2357570/087a8e54a6fa8cd090cf4d40316938d4791b4440/header_alt_assets_17.jpg",
+    "icon": "https://static.wikia.nocookie.net/logopedia/images/b/b8/Overwatch_2_icon.svg",
+    "synopsis": "Overwatch® 2 es un shooter por equipos aclamado por la crítica ambientado en un futuro optimista con un plantel de héroes en evolución. Júntate con amigos y jugad hoy mismo.",
+    "tags": [],
+    "images": []
+  },
+  {
+    "id": "piko_park",
+    "name": "Piko Park",
+    "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1509960/header.jpg",
+    "icon": "https://cdn2.steamgriddb.com/icon_thumb/1bbd187fe4eb0cf618b68f80300b6b13.png",
+    "synopsis": "PICO PARK es un juego de puzles de acción cooperativo multijugador local/en línea para 2-8 jugadores.",
+    "tags": [],
+    "images": []
+  },
+  {
+    "id": "pony_island",
+    "name": "Pony Island",
+    "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/405640/header.jpg",
+    "icon": "https://cdn2.steamgriddb.com/icon/b5bf79061d232cfe39e740c80cf8d4f1/32/256x256.png",
+    "synopsis": "Pony Island es un juego de puzzles y suspense aparentemente inocente. Estás en el limbo, atrapado en una malévola máquina de arcade defectuosa diseñada por el mismísimo diablo. No es un juego sobre ponis.",
+    "tags": [],
+    "images": []
+  },
+  {
+    "id": "terraria",
+    "name": "Terraria",
+    "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/105600/header.jpg",
+    "icon": "https://i.pinimg.com/736x/cf/97/2b/cf972b7a14b367ec06e552ff8276ff6e.jpg",
+    "synopsis": "¡Cava, lucha, explora, construye! Con este juego de aventuras repleto de acción nada es imposible. ¡Pack de Cuatro también disponible!",
+    "tags": [],
+    "images": []
+  },
+  {
+    "id": "unrailed",
+    "name": "Unrailed",
+    "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1016920/header.jpg",
+    "icon": "https://cdn2.steamgriddb.com/icon_thumb/eb852fa9d9e60316fa715602baf5bc05.png",
+    "synopsis": "Unrailed! es un juego multijugador cooperativo en el que colaboras con tus amigos para construir una vía a través de interminables mundos de generación procedimental. Supera los encuentros con sus habitantes, mejora tu tren ¡y evita que descarrile!",
+    "tags": [],
+    "images": []
+  },
+  {
+    "id": "cookie_clicker",
+    "name": "Cookie Clicker",
+    "cover": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1454400/header.jpg",
+    "icon": "https://cdn2.steamgriddb.com/icon/d4e879aca51d48e0feba3112f0d1b8cd/32/194x194.png",
+    "synopsis": "¡Un juego incremental en el que hay que hacer galletas! Se publicó en 2013 en la web y se ha desarrollado activamente desde entonces. Esta es la versión oficial para Steam.",
+    "tags": [],
+    "images": []
+  },
+  {
+    "id": "the_simpsons_game",
+    "name": "El Juego de Los Simpsons",
+    "cover": "https://cdn2.steamgriddb.com/thumb/764f9642ebf04622c53ebc366a68c0a7.jpg",
+    "icon": "https://cdn2.steamgriddb.com/icon_thumb/38862237f701dd26bc89bb7906950b3a.png",
+    "synopsis": "La familia Simpson descubre que son personajes de un videojuego y, al obtener la guía, adquieren superpoderes. Homer, Marge, Bart y Lisa deben usarlos para salvar a Springfield de una amenaza inminente. El juego es una aventura de acción y plataformas llena de parodias a la cultura pop y al mundo de los videojuegos.",
+    "tags": [],
+    "images": []
   }
+  
+  
+
+
 ]

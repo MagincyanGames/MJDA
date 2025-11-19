@@ -8,7 +8,10 @@ h1 { margin: 0; font-size: 1.6rem; }
 	gap: 1.5rem;
 	margin-top: 1rem;
 	align-items: stretch; /* ensures children stretch to full width */
-	min-width: 60vw; /* minimum width of the games container relative to viewport */
+	/* widen grid container to allow larger card sizes on desktop while remaining viewport-based */
+	width: min(96vw, 1600px);
+	margin-left: auto;
+	margin-right: auto;
 }
 .game-wrapper {
 	width: 100%;
@@ -25,24 +28,31 @@ h1 { margin: 0; font-size: 1.6rem; }
 .toggle.active { color: var(--text); background: linear-gradient(90deg, rgba(58,160,255,0.06), rgba(100,108,255,0.02)); border-color: rgba(58,160,255,0.08); }
 
 /* Grid view */
-.games-grid.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1.5rem; margin-top: 1rem; align-items: start; grid-auto-rows: 1fr; min-width: 60vw; }
+.games-grid.grid { display: grid; grid-template-columns: repeat(1, 1fr); gap: 1.5rem; margin-top: 1rem; align-items: start; grid-auto-rows: 1fr; width: 100%; }
 .games-grid.grid .game-wrapper { width: auto; display:flex; justify-content:stretch; align-items: flex-start; }
 .games-grid.grid .game-wrapper .game-tile { max-width: none; width: 100%; }
 
 /* Increase min column width on larger screens so tiles scale nicely while still allowing more columns */
 /* Rely primarily on auto-fit+minmax to adapt column count to available width. 
 	 Use breakpoints for a slightly larger minimum on wider screens for visual balance. */
-@media (min-width: 700px) {
-	.games-grid.grid { grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); }
+/* Responsive column sizes: smaller min column on very small devices, then slightly larger as space allows */
+/* Use explicit counts but add minimum column sizes to avoid narrow tiles on large desktops */
+@media (min-width: 520px) {
+	.games-grid.grid { grid-template-columns: repeat(2, minmax(180px, 1fr)); }
 }
 @media (min-width: 900px) {
-	.games-grid.grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+	.games-grid.grid { grid-template-columns: repeat(3, minmax(220px, 1fr)); }
 }
 @media (min-width: 1200px) {
-	.games-grid.grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+	.games-grid.grid { grid-template-columns: repeat(4, minmax(280px, 1fr)); }
 }
 
 /* Make sure very narrow viewport doesn't produce an unwanted horizontal scroll: fallback to 100% width */
 @media (max-width: 520px) {
-    .games-grid, .games-grid.grid { min-width: 100vw; }
+	.games-grid, .games-grid.grid { width: 100%; padding: 0; }
+}
+
+@media (max-width: 520px) {
+	.games-controls { justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; }
+	.view-toggle { margin-top: 0.5rem; }
 }

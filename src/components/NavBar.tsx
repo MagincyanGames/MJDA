@@ -1,7 +1,9 @@
 import { NavLink, Link } from 'react-router-dom'
 import './NavBar.css'
+import { useState } from 'react'
 
 export default function NavBar() {
+  const [open, setOpen] = useState(false)
   return (
     <header className="nav">
       <div className="nav-inner">
@@ -17,11 +19,16 @@ export default function NavBar() {
             </div>
           </Link>
         </div>
-        <nav className="nav-links">
-          <NavLink to="/" end>Inicio</NavLink>
-          <NavLink to="/games">Todos los Juegos</NavLink>
-          <NavLink to="/awards">Premios</NavLink>
+        <nav className={`nav-links ${open ? 'open' : ''}`}>
+          <NavLink to="/" end onClick={() => setOpen(false)}>Inicio</NavLink>
+          <NavLink to="/games" onClick={() => setOpen(false)}>Todos los Juegos</NavLink>
+          <NavLink to="/awards" onClick={() => setOpen(false)}>Premios</NavLink>
         </nav>
+        <button className="nav-toggle" onClick={() => setOpen(!open)} aria-label="Menu" aria-expanded={open}>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M3 12h18M3 6h18M3 18h18" />
+          </svg>
+        </button>
       </div>
     </header>
   )

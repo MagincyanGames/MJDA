@@ -96,3 +96,28 @@ Dev server URL: http://localhost:3000/ (configurado en `vite.config.ts`)
 
 La información se guarda en JSON de forma provisional. Si deseas gestionar datos con un backend o permitir modificaciones en producción, se puede añadir un API que edite estos JSON o migrarlos a una base de datos más robusta.
 
+## Mobile compatibility
+
+Se añadieron mejoras de estilo y un menú responsivo para dispositivos móviles:
+
+- Ajustes globales de `box-sizing` y `overflow-x` para evitar scroll horizontal en pantallas pequeñas.
+- Menú de navegación móvil con botón hamburguesa (`NavBar`) y cierre automático al navegar.
+- Ajustes en `GameCard`, `GameTile` y `Games` para eliminar `min-width` que provocaban overflow y para usar `max-width` o `width: 100%`.
+- Cambios en `GameDetail` y `Home` para reducir tamaños y adaptarse mejor a pantallas pequeñas.
+
+Pruebas recomendadas:
+
+1. Ejecuta el servidor de desarrollo y abre el proyecto en el teléfono o en una ventana de navegador con ancho reducido:
+
+```pwsh
+npm install
+npm run host
+```
+
+2. Accede desde un móvil en la misma LAN (usa `--host` para exponer el servidor) y prueba:
+  - Abrir la página principal y navegar hacia una lista de juegos y detalle de juego.
+  - Verificar que el menú se despliega con el botón hamburguesa y que la navegación cierra el menú.
+  - Comprobar que no existe scroll horizontal inesperado y que las cartas/tiles escalan correctamente.
+
+Si encuentras problemas con un componente específico, indícamelo y puedo afinar los estilos para ese caso concreto.
+

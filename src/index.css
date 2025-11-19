@@ -40,9 +40,26 @@ body {
 
 .app-container {
   width: 100%;
-  max-width: 1280px;
+  max-width: 1600px; /* increase default max-width so grid can have more space on PC */
   padding: 2rem;
   color: var(--text, #eaf2ff);
+}
+
+/* Ensure predictable box sizing to avoid overflow issues */
+* { box-sizing: border-box; }
+
+/* Reduce app padding on smaller devices */
+@media (max-width: 520px) {
+  .app-container { padding: 1rem; }
+}
+
+@media (max-width: 520px) {
+  body { overflow-x: hidden; }
+}
+
+/* Slightly smaller headings on small screens */
+@media (max-width: 420px) {
+  h1 { font-size: 1.6rem; }
 }
 
 /* Allow the main container to expand a bit on very wide screens to give more room for grids */

@@ -15,6 +15,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 
 .brand {
@@ -36,6 +37,7 @@
 }
 
 .brand-text { display:flex; flex-direction: column; line-height: 1; }
+.brand-text { min-width: 0; }
 .brand-subtitle { font-size: 0.72rem; opacity: 0.85; color: var(--muted); font-weight: 600; margin-top: -0.08rem; }
 
 .nav-links a {
@@ -61,4 +63,17 @@
 @media (max-width: 760px) {
   .nav-inner { padding: 0.6rem; }
   .nav-links a { padding: 0.45rem 0.7rem; }
+}
+
+/* Mobile navigation: hide links by default and show via the .open class */
+@media (max-width: 760px) {
+  .nav-links { display: none; position: absolute; left: 0; right: 0; top: 100%; background: linear-gradient(180deg, rgba(10,20,35,0.95), rgba(10,20,35,0.95)); padding: 0.5rem 1rem; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; z-index: 40; }
+  .nav-links.open { display: block; }
+  .nav-links a { display:block; margin: 0; }
+  .nav-toggle { display: inline-flex; background: transparent; border: 1px solid rgba(255,255,255,0.02); padding: 0.45rem; border-radius: 8px; color: var(--muted); cursor:pointer; align-items:center; }
+}
+
+/* Hide the toggle on wide screens to keep desktop nav as-is */
+@media (min-width: 761px) {
+  .nav-toggle { display:none; }
 }

@@ -18,7 +18,7 @@
 }
 
 .game-tile-link { display:block; text-decoration:none; color:inherit; }
-.game-tile { cursor: pointer; display:flex; flex-direction:column; min-height: 0; }
+.game-tile { cursor: pointer; display:flex; flex-direction:column; min-height: 0; min-width: 0; }
 .game-tile-link { display:block; width:100%; }
 
 .tile-cover:empty { background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02)); }
@@ -43,4 +43,13 @@
 
 @media (max-width: 760px) {
   .tile-label { font-size: 0.95rem; padding: 0.5rem; }
+}
+
+/* Bump tile size a bit on larger screens for better visibility */
+@media (min-width: 900px) {
+  .tile-cover { aspect-ratio: 16/10; }
+}
+@media (min-width: 1200px) {
+  .tile-cover { aspect-ratio: 16/11; }
+  .tile-label { font-size: 1.05rem; padding: 0.7rem 1rem; }
 }

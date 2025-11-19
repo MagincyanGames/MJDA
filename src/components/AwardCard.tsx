@@ -12,7 +12,7 @@ interface AwardCardProps {
   nominees?: { id: string; name?: string }[]
 }
 
-export default function AwardCard({ id, name, cover, icon, trophy, description, nominees = [] }: AwardCardProps) {
+export default function AwardCard({ id, name, cover, icon, trophy, description }: AwardCardProps) {
   const coverSrc = resolveImageSrc(cover)
   const iconSrc = resolveImageSrc(icon)
   return (
@@ -26,9 +26,6 @@ export default function AwardCard({ id, name, cover, icon, trophy, description, 
         <div className="award-card-right">
           <h3 id={`award-title-${id}`}>{name}</h3>
           {description ? <p className="muted">{description}</p> : null}
-          <div className="nominees">
-            {nominees.map(n => <div key={n.id} className="nominee"><Link to={`/games/${n.id}`}>{n.name || n.id}</Link></div>)}
-          </div>
         </div>
       </article>
     </Link>
